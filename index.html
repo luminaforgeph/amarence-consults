@@ -296,7 +296,7 @@
             <h3 id="detail-title">Build on a clear foundation.</h3>
             <p id="detail-copy">Support for the essential steps involved in establishing and formalising a business, with guidance shaped around the requirements of each enquiry.</p>
             <ul class="service-list" id="detail-list">
-              <li>CAC business registration</li><li>Company structure changes</li><li>Trademark registration</li><li>SCUML-related assistance</li>
+              <li>CAC business registration</li><li>Business name conversion enquiries</li><li>Trademark registration</li><li>SCUML-related assistance</li>
             </ul>
             <a class="detail-link" href="#contact">Discuss a corporate enquiry <span aria-hidden="true">↗</span></a>
           </div>
@@ -383,13 +383,13 @@
           label: 'Finance & accounting',
           title: 'Bring clarity to the numbers.',
           copy: 'Accounting and financial consultancy support to help individuals and organisations understand their obligations, organise information and make more informed decisions.',
-          items: ['Accounting consultancy', 'Financial guidance', 'Bookkeeping support', 'Business finance enquiries']
+          items: ['Accounting consultancy', 'Financial consultancy']
         },
         travel: {
           label: 'Travel assistance',
           title: 'Make the journey easier.',
           copy: 'Travel enquiry and flight-booking assistance, with a clear starting point for planning the details of your next trip.',
-          items: ['Flight booking enquiries', 'Travel planning assistance', 'Itinerary support', 'Booking-related guidance']
+          items: ['Flight booking enquiries', 'Travel booking assistance']
         }
       };
       const tabs = [...document.querySelectorAll('.service-tab')];
@@ -440,7 +440,7 @@
         form.addEventListener('submit', event => {
           event.preventDefault();
           if (!form.reportValidity()) return;
-          const visitor = form.elements.name.value.trim();
+          const visitor = form.querySelector('[name="name"]').value.trim();
           status.textContent = 'Thank you' + (visitor ? ', ' + visitor : '') + '. This demonstration form is working locally, but no enquiry has been sent or stored. An approved Amarence inbox or CRM connection is required before launch.';
           status.classList.add('is-visible');
           form.reset();
