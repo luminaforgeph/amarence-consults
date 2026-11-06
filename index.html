@@ -3,467 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#17231f">
-  <meta name="description" content="Explore corporate services, accounting and financial consultancy, and travel assistance with Amarence Consults in Port Harcourt, Nigeria.">
+  <meta name="theme-color" content="#f3f0e8">
+  <meta name="description" content="A clearer way forward. Professional support across corporate services, finance and travel with Amarence Consults.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Amarence Consults — Good decisions move everything forward">
-  <meta property="og:description" content="Connected support for business, finance and travel in Port Harcourt, Nigeria.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=85">
-  <title>Amarence Consults — Business. Finance. Travel.</title>
+  <meta property="og:title" content="Amarence Consults — A clearer way forward">
+  <meta property="og:description" content="Thoughtful professional support for business, finance and travel.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85">
+  <title>Amarence Consults — A clearer way forward</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      color-scheme: light;
-      --ink: #17231f;
-      --ink-soft: #35443d;
-      --paper: #f3f1e9;
-      --paper-deep: #e9e7dd;
-      --white: #fbfaf6;
-      --sage: #aab9a9;
-      --sage-pale: #dce3d8;
-      --clay: #b96f55;
-      --muted: #727970;
-      --line: rgba(23, 35, 31, .17);
-      --serif: Georgia, "Times New Roman", serif;
-      --sans: "DM Sans", Arial, sans-serif;
-      --display: "Outfit", Arial, sans-serif;
-      --gutter: clamp(1.2rem, 5vw, 5.5rem);
-      --ease: cubic-bezier(.2,.75,.25,1);
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
-    body, button, input, textarea, select { font-family: var(--sans); }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    button { color: inherit; }
-    button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
-    :focus-visible { outline: 2px solid var(--clay); outline-offset: 4px; }
-    ::selection { background: var(--sage); color: var(--ink); }
-    .skip-link { position: fixed; z-index: 1000; top: .75rem; left: .75rem; padding: .8rem 1rem; background: var(--white); color: var(--ink); transform: translateY(-160%); }
-    .skip-link:focus { transform: translateY(0); }
-    .shell { width: min(100% - (var(--gutter) * 2), 1440px); margin-inline: auto; }
-    .site-header { position: absolute; z-index: 20; inset: 0 0 auto; color: var(--white); }
-    .nav-wrap { min-height: 88px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.22); }
-    .wordmark { display: inline-flex; align-items: center; gap: .72rem; font: 700 1.05rem var(--display); letter-spacing: .11em; }
-    .mark { width: 28px; height: 28px; border: 1px solid rgba(255,255,255,.75); display: grid; place-items: center; font: 500 .8rem var(--serif); transform: rotate(45deg); }
-    .mark span { transform: rotate(-45deg); }
-    .nav-links { display: flex; align-items: center; gap: clamp(1.3rem, 3vw, 3rem); font-size: .78rem; letter-spacing: .035em; }
-    .nav-links a { opacity: .82; transition: opacity .2s ease; }
-    .nav-links a:hover { opacity: 1; }
-    .nav-cta { padding: .8rem 1.15rem; border: 1px solid rgba(255,255,255,.6); transition: background .25s ease, color .25s ease; }
-    .nav-cta:hover { background: var(--white); color: var(--ink); }
-    .menu-toggle { display: none; border: 1px solid rgba(255,255,255,.55); background: transparent; color: white; padding: .65rem .8rem; font-size: .75rem; letter-spacing: .08em; }
-    .hero { min-height: 780px; min-height: min(900px, 100svh); position: relative; overflow: hidden; display: flex; align-items: end; background: var(--ink); color: var(--white); isolation: isolate; }
-    .hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgba(14,25,21,.96) 0%, rgba(14,25,21,.87) 38%, rgba(14,25,21,.24) 100%), url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=88") center 43% / cover no-repeat; transform: scale(1.015); }
-    .hero::after { content: ""; position: absolute; inset: auto 0 0; height: 34%; z-index: -1; background: linear-gradient(0deg, rgba(14,25,21,.56), transparent); }
-    .hero-inner { width: min(100% - (var(--gutter) * 2), 1440px); margin: 0 auto; padding-top: 150px; padding-bottom: clamp(4.5rem, 9vw, 8.5rem); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(230px, .55fr); gap: 4vw; align-items: end; }
-    .hero-copy { max-width: 880px; }
-    .eyebrow { display: flex; align-items: center; gap: .75rem; text-transform: uppercase; font-size: .68rem; letter-spacing: .19em; font-weight: 600; }
-    .eyebrow::before { content: ""; width: 30px; height: 1px; background: var(--clay); }
-    h1, h2, h3, p { margin-top: 0; }
-    h1 { max-width: 10.8ch; margin: 1.7rem 0 1.5rem; font: 500 clamp(3.65rem, 7.2vw, 7.6rem)/.94 var(--display); letter-spacing: -.065em; }
-    h1 em { font-family: var(--serif); font-weight: 400; letter-spacing: -.075em; color: #d3d9cc; }
-    .hero-lede { max-width: 480px; color: rgba(255,255,255,.77); font-size: clamp(.98rem, 1.25vw, 1.12rem); line-height: 1.8; }
-    .hero-actions { display: flex; align-items: center; gap: 1.6rem; margin-top: 2.25rem; flex-wrap: wrap; }
-    .button { display: inline-flex; min-height: 54px; align-items: center; justify-content: center; gap: 1rem; padding: 0 1.35rem; background: var(--sage); color: var(--ink); border: 1px solid var(--sage); font-size: .78rem; font-weight: 700; transition: transform .25s var(--ease), background .25s ease, color .25s ease, border-color .25s ease; }
-    .button:hover { transform: translateY(-3px); background: #c1cfbd; border-color: #c1cfbd; }
-    .button .arrow { font-size: 1.05rem; transition: transform .25s ease; }
-    .button:hover .arrow { transform: translateX(4px); }
-    .text-link { display: inline-flex; align-items: center; gap: .75rem; font-size: .78rem; color: rgba(255,255,255,.9); }
-    .text-link::after { content: "↗"; color: var(--sage); font-size: 1rem; }
-    .hero-aside { justify-self: end; max-width: 230px; padding: 1.2rem 0 0 1.3rem; border-left: 1px solid rgba(255,255,255,.45); color: rgba(255,255,255,.77); font-size: .77rem; line-height: 1.7; }
-    .hero-aside strong { display: block; margin-bottom: .55rem; color: white; font: 500 1.15rem var(--display); letter-spacing: -.02em; }
-    .hero-index { position: absolute; right: var(--gutter); top: 48%; writing-mode: vertical-rl; color: rgba(255,255,255,.55); font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; }
-    .location-band { background: var(--sage); color: var(--ink); }
-    .location-inner { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-    .location-inner p { margin: 0; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; }
-    .location-inner span { font: italic 1.05rem var(--serif); }
-    .intro { padding: clamp(6rem, 12vw, 11rem) 0 clamp(6rem, 11vw, 10rem); display: grid; grid-template-columns: .65fr 1.35fr; gap: 8vw; align-items: start; }
-    .section-kicker { color: var(--clay); font-size: .68rem; letter-spacing: .17em; font-weight: 700; text-transform: uppercase; }
-    .intro h2 { max-width: 850px; margin: 0; font: 500 clamp(2.55rem, 5.4vw, 5.5rem)/1.04 var(--display); letter-spacing: -.06em; }
-    .intro h2 em { color: #78897d; font-family: var(--serif); font-weight: 400; }
-    .intro-note { max-width: 470px; margin: 2rem 0 0 auto; color: var(--muted); font-size: .94rem; line-height: 1.9; }
-    .services { padding: clamp(5rem, 9vw, 8.5rem) 0; background: var(--ink); color: var(--white); }
-    .services-head { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 4rem; }
-    .services-head h2 { max-width: 620px; margin: .8rem 0 0; font: 500 clamp(2.8rem, 5.5vw, 5.4rem)/.98 var(--display); letter-spacing: -.06em; }
-    .services-head p { max-width: 280px; margin: 0; color: rgba(255,255,255,.62); font-size: .82rem; line-height: 1.8; }
-    .service-explorer { display: grid; grid-template-columns: minmax(260px, .72fr) minmax(0, 1.28fr); border-top: 1px solid rgba(255,255,255,.25); }
-    .service-tabs { display: flex; flex-direction: column; border-right: 1px solid rgba(255,255,255,.2); }
-    .service-tab { position: relative; display: grid; grid-template-columns: 38px 1fr 20px; align-items: center; gap: .6rem; min-height: 104px; padding: 1.2rem 1.5rem 1.2rem 0; text-align: left; border: 0; border-bottom: 1px solid rgba(255,255,255,.2); background: transparent; color: rgba(255,255,255,.58); cursor: pointer; transition: color .25s ease, padding .25s ease; }
-    .service-tab[aria-selected="true"] { color: var(--white); padding-left: .6rem; }
-    .service-tab[aria-selected="true"]::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--clay); }
-    .service-tab .tab-no { font: 400 .78rem var(--serif); color: var(--clay); }
-    .service-tab strong { font: 500 clamp(1.15rem, 1.8vw, 1.65rem) var(--display); letter-spacing: -.025em; }
-    .service-tab .tab-arrow { justify-self: end; font-size: 1.2rem; transition: transform .25s ease; }
-    .service-tab[aria-selected="true"] .tab-arrow { transform: rotate(45deg); color: var(--sage); }
-    .service-detail { min-height: 420px; padding: clamp(2rem, 5vw, 4.8rem) clamp(1.5rem, 6vw, 6rem); display: flex; flex-direction: column; justify-content: center; }
-    .service-detail .detail-index { color: var(--sage); font-size: .68rem; text-transform: uppercase; letter-spacing: .17em; }
-    .service-detail h3 { max-width: 600px; margin: 1rem 0 1rem; font: 500 clamp(2.1rem, 4vw, 4.1rem)/1.02 var(--display); letter-spacing: -.055em; }
-    .service-detail p { max-width: 560px; color: rgba(255,255,255,.65); font-size: .91rem; line-height: 1.85; }
-    .service-list { display: flex; flex-wrap: wrap; gap: .65rem 1.5rem; margin: 1.2rem 0 0; padding: 0; list-style: none; }
-    .service-list li { display: flex; align-items: center; gap: .55rem; color: rgba(255,255,255,.86); font-size: .78rem; }
-    .service-list li::before { content: ""; width: 5px; height: 5px; background: var(--clay); border-radius: 50%; }
-    .detail-link { display: inline-flex; width: fit-content; align-items: center; gap: .8rem; margin-top: 2.2rem; padding-bottom: .45rem; border-bottom: 1px solid rgba(255,255,255,.5); font-size: .78rem; }
-    .detail-link span { color: var(--sage); }
-    .service-detail.is-changing { animation: detail-in .34s var(--ease) both; }
-    @keyframes detail-in { from { opacity: .2; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-    .bridge { display: grid; grid-template-columns: 1.1fr .9fr; gap: 8vw; align-items: center; padding: clamp(6rem, 12vw, 11rem) 0; }
-    .bridge-visual { position: relative; min-height: 560px; overflow: hidden; background: var(--paper-deep); }
-    .bridge-visual img { width: 100%; height: 100%; min-height: 560px; object-fit: cover; filter: saturate(.72); }
-    .bridge-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(18,31,26,.28)); pointer-events: none; }
-    .image-caption { position: absolute; z-index: 1; bottom: 1.4rem; left: 1.5rem; color: white; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; }
-    .bridge-copy { padding: 2rem 0; }
-    .bridge-copy h2 { margin: 1rem 0 1.5rem; font: 500 clamp(2.8rem, 5vw, 5rem)/.99 var(--display); letter-spacing: -.06em; }
-    .bridge-copy h2 em { font-family: var(--serif); font-weight: 400; color: #78897d; }
-    .bridge-copy p { max-width: 430px; color: var(--muted); font-size: .92rem; line-height: 1.9; }
-    .principles { margin-top: 2.8rem; border-top: 1px solid var(--line); }
-    .principle { display: grid; grid-template-columns: 34px 1fr; gap: .9rem; padding: 1.15rem 0; border-bottom: 1px solid var(--line); }
-    .principle span { color: var(--clay); font: italic 1rem var(--serif); }
-    .principle strong { font: 500 1rem var(--display); }
-    .principle p { margin: .35rem 0 0; font-size: .78rem; line-height: 1.65; }
-    .contact { background: var(--paper-deep); padding: clamp(5rem, 10vw, 9rem) 0; }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9vw; align-items: start; }
-    .contact h2 { max-width: 590px; margin: .9rem 0 1.4rem; font: 500 clamp(3rem, 6vw, 6.2rem)/.95 var(--display); letter-spacing: -.065em; }
-    .contact h2 em { font-family: var(--serif); color: #78897d; font-weight: 400; }
-    .contact-intro { max-width: 390px; color: var(--muted); line-height: 1.85; font-size: .9rem; }
-    .contact-meta { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); font-size: .74rem; }
-    .contact-meta strong { display: block; color: var(--ink); margin-bottom: .45rem; font-size: .78rem; }
-    .enquiry-form { padding-top: .5rem; }
-    .field { margin-bottom: 1.45rem; }
-    .field label { display: block; margin-bottom: .55rem; color: var(--ink-soft); font-size: .72rem; font-weight: 600; }
-    .field input, .field select, .field textarea { width: 100%; border: 0; border-bottom: 1px solid rgba(23,35,31,.35); border-radius: 0; padding: .8rem 0; background: transparent; color: var(--ink); font: 400 .9rem var(--sans); outline: none; }
-    .field input:focus, .field select:focus, .field textarea:focus { border-bottom-color: var(--clay); box-shadow: 0 1px 0 var(--clay); }
-    .field textarea { min-height: 100px; resize: vertical; }
-    .field input::placeholder, .field textarea::placeholder { color: #92988f; }
-    .form-submit { width: 100%; border: 0; cursor: pointer; margin-top: .4rem; }
-    .form-note { margin: 1rem 0 0; color: var(--muted); font-size: .68rem; line-height: 1.6; }
-    .form-status { display: none; margin-top: 1rem; padding: 1rem; background: var(--sage-pale); color: var(--ink); font-size: .8rem; line-height: 1.6; }
-    .form-status.is-visible { display: block; }
-    .site-footer { background: var(--ink); color: var(--white); padding: 2.2rem 0; }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
-    .footer-inner .wordmark { font-size: .9rem; }
-    .footer-note { margin: 0; color: rgba(255,255,255,.55); font-size: .7rem; }
-    .footer-links { display: flex; gap: 1.3rem; color: rgba(255,255,255,.7); font-size: .72rem; }
-    .reveal { opacity: 1; transform: none; }
-    .js-motion-ready .reveal { opacity: 0; transform: translateY(22px); transition: opacity .75s var(--ease), transform .75s var(--ease); }
-    .js-motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
-    .hero .hero-copy > * { animation: hero-in .8s var(--ease) both; }
-    .hero .hero-copy > *:nth-child(2) { animation-delay: .08s; }
-    .hero .hero-copy > *:nth-child(3) { animation-delay: .16s; }
-    .hero .hero-copy > *:nth-child(4) { animation-delay: .24s; }
-    .hero .hero-copy > *:nth-child(5) { animation-delay: .32s; }
-    @keyframes hero-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-    @media (max-width: 760px) {
-      :root { --gutter: 1.2rem; }
-      .nav-wrap { min-height: 74px; }
-      .menu-toggle { display: inline-flex; }
-      .nav-links { display: none; position: absolute; top: 74px; left: 0; right: 0; padding: 1.2rem var(--gutter) 1.5rem; background: var(--ink); border-top: 1px solid rgba(255,255,255,.16); flex-direction: column; align-items: stretch; gap: 0; }
-      .nav-links.is-open { display: flex; }
-      .nav-links a { padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,.14); }
-      .nav-links .nav-cta { margin-top: .9rem; text-align: center; border: 1px solid rgba(255,255,255,.45); padding: .9rem; }
-      .hero { min-height: 790px; min-height: max(740px, 94svh); }
-      .hero::before { background: linear-gradient(90deg, rgba(14,25,21,.92), rgba(14,25,21,.57)), url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1100&q=82") 58% center / cover no-repeat; }
-      .hero-inner { padding-top: 135px; padding-bottom: 4.2rem; display: block; }
-      h1 { max-width: 9.5ch; margin-top: 1.35rem; font-size: clamp(3.55rem, 13.4vw, 6rem); }
-      .hero-lede { max-width: 390px; }
-      .hero-aside { margin-top: 3rem; max-width: 260px; }
-      .hero-index { display: none; }
-      .location-inner { min-height: 100px; padding-block: 1.25rem; }
-      .location-inner p { font-size: .65rem; }
-      .intro { grid-template-columns: 1fr; gap: 2rem; padding-block: 5.5rem; }
-      .intro-note { margin: 1.5rem 0 0; }
-      .services { padding-block: 5.5rem; }
-      .services-head { display: block; margin-bottom: 2.5rem; }
-      .services-head p { margin-top: 1.2rem; }
-      .service-explorer { grid-template-columns: 1fr; }
-      .service-tabs { border-right: 0; }
-      .service-tab { min-height: 76px; padding: .8rem .7rem .8rem 0; }
-      .service-tab[aria-selected="true"] { padding-left: .65rem; }
-      .service-detail { min-height: 370px; padding: 2.3rem 0 1.5rem; }
-      .bridge { grid-template-columns: 1fr; gap: 2.5rem; padding-block: 5.5rem; }
-      .bridge-visual, .bridge-visual img { min-height: 390px; }
-      .bridge-copy { padding: 0; }
-      .contact { padding-block: 5.5rem; }
-      .contact-grid { grid-template-columns: 1fr; gap: 3.5rem; }
-      .contact-meta { justify-content: flex-start; flex-wrap: wrap; }
-      .footer-inner { align-items: flex-start; flex-direction: column; }
-    }
-    @media (max-width: 390px) {
-      h1 { font-size: clamp(3.2rem, 13vw, 4.1rem); }
-      .hero-actions { gap: 1.1rem; }
-      .button { min-height: 50px; padding-inline: 1rem; }
-      .contact h2 { font-size: 3.15rem; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-      .js-motion-ready .reveal { opacity: 1; transform: none; }
-    }
+    :root{color-scheme:light;--paper:#f3f0e8;--paper-2:#e8e4da;--white:#fbfaf6;--green:#17251f;--muted:#73786f;--line:rgba(23,37,31,.18);--gold:#b7a57d;--serif:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans",Arial,sans-serif;--gutter:clamp(1.25rem,5.2vw,6.5rem);--rail:76px;--ease:cubic-bezier(.2,.72,.22,1)}
+    *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:2rem}body{margin:0;background:var(--paper);color:var(--green);font-family:var(--sans);-webkit-font-smoothing:antialiased}body,button,input,select,textarea{font-family:var(--sans)}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button{color:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}:focus-visible{outline:2px solid #8b7448;outline-offset:4px}::selection{background:var(--green);color:var(--paper)}
+    .skip-link{position:fixed;z-index:1000;top:1rem;left:1rem;padding:.8rem 1rem;background:var(--green);color:white;transform:translateY(-180%)}.skip-link:focus{transform:translateY(0)}
+    .site-rail{position:fixed;z-index:30;inset:0 auto 0 0;width:var(--rail);border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:1.4rem .8rem;background:rgba(243,240,232,.94);backdrop-filter:blur(12px)}
+    .rail-brand{font-size:.68rem;font-weight:700;letter-spacing:.22em;writing-mode:vertical-rl;transform:rotate(180deg)}.rail-mark{width:28px;height:28px;border:1px solid var(--green);border-radius:50%;display:grid;place-items:center;font:500 1rem var(--serif)}.rail-links{display:flex;flex-direction:column;gap:1.5rem;align-items:center}.rail-links a{font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;writing-mode:vertical-rl;opacity:.62;transition:opacity .2s ease}.rail-links a:hover,.rail-links a[aria-current=location]{opacity:1}.rail-bottom{font-size:.58rem;letter-spacing:.13em;writing-mode:vertical-rl;color:var(--muted)}.mobile-header{display:none}main{margin-left:var(--rail);overflow:clip}.shell{width:min(100% - (var(--gutter)*2),1500px);margin-inline:auto}
+    .eyebrow,.kicker{display:flex;align-items:center;gap:.7rem;text-transform:uppercase;letter-spacing:.18em;font-size:.62rem;font-weight:700}.eyebrow:before,.kicker:before{content:"";width:25px;height:1px;background:var(--gold)}
+    .hero{min-height:max(720px,100svh);position:relative;display:grid;grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr);align-items:stretch;padding:clamp(4.5rem,8vh,7rem) var(--gutter) clamp(3rem,6vh,5rem);gap:clamp(1.5rem,4vw,5rem)}
+    .hero-copy{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-block:2rem}.hero-number{position:absolute;top:1rem;left:0;color:var(--muted);font-size:.62rem;letter-spacing:.18em}h1,h2,h3,p{margin-top:0}
+    h1{font:400 clamp(4.5rem,8.6vw,9.4rem)/.79 var(--serif);letter-spacing:-.065em;max-width:7ch;margin:2.3rem 0 2rem}h1 em,h2 em{font-weight:400;color:#8b8a77}.hero-lede{max-width:360px;color:#59645c;font-size:.91rem;line-height:1.85;margin-bottom:2rem}.hero-actions{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+    .button{min-height:52px;padding:0 1.25rem;display:inline-flex;align-items:center;justify-content:center;gap:1.4rem;background:var(--green);color:var(--paper);border:1px solid var(--green);font-size:.72rem;font-weight:600;letter-spacing:.02em;transition:background .25s ease,color .25s ease,transform .25s var(--ease)}.button:hover{background:transparent;color:var(--green);transform:translateY(-2px)}.button .arrow{font-size:1.1rem;transition:transform .25s ease}.button:hover .arrow{transform:translate(3px,-3px)}.quiet-link{font-size:.7rem;border-bottom:1px solid var(--line);padding:.45rem 0;transition:border-color .2s ease}.quiet-link:hover{border-color:var(--green)}
+    .hero-aside{position:absolute;left:var(--gutter);bottom:1.5rem;color:var(--muted);font-size:.61rem;letter-spacing:.12em;text-transform:uppercase}.hero-visual{position:relative;min-height:560px;align-self:stretch;overflow:hidden;background:#d5d4cc}.hero-visual img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:48% center}.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,27,21,.02) 45%,rgba(15,27,21,.46) 100%)}.visual-caption{position:absolute;z-index:2;bottom:1.5rem;left:1.5rem;right:1.5rem;display:flex;align-items:end;justify-content:space-between;color:white;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}.visual-caption span:last-child{font:italic 1.3rem var(--serif);letter-spacing:0;text-transform:none}.hero-vertical{position:absolute;right:1rem;top:2rem;z-index:2;writing-mode:vertical-rl;color:rgba(255,255,255,.86);font-size:.58rem;letter-spacing:.2em}.hero-bottom{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:1.15rem;color:var(--muted);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}.hero-bottom strong{color:var(--green);font-weight:600}
+    .manifesto{background:var(--green);color:var(--paper);padding:clamp(6rem,11vw,11rem) var(--gutter);position:relative}.manifesto-inner{width:min(100%,1280px);margin:auto;display:grid;grid-template-columns:.35fr 1.65fr;gap:4vw}.manifesto .kicker{color:#c4b995;align-self:start;margin-top:1rem}.manifesto h2{font:400 clamp(3.4rem,7.5vw,8.2rem)/.91 var(--serif);letter-spacing:-.055em;max-width:12ch;margin:0}.manifesto h2 em{color:#c6b995}.manifesto-foot{grid-column:2;max-width:500px;margin:2.2rem 0 0 auto;color:rgba(243,240,232,.72);font-size:.88rem;line-height:1.9}.manifesto-index{position:absolute;right:var(--gutter);top:2rem;color:rgba(243,240,232,.38);font-size:.58rem;letter-spacing:.18em}
+    .expertise{padding:clamp(5.5rem,9vw,9rem) 0}.expertise-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:4vw;align-items:end;margin-bottom:3.8rem}.expertise-head .kicker{align-self:start;margin-top:.6rem}.expertise-head h2{font:400 clamp(3.5rem,6.4vw,6.8rem)/.88 var(--serif);letter-spacing:-.055em;max-width:10ch;margin:0}.expertise-head p{max-width:330px;color:var(--muted);font-size:.8rem;line-height:1.8;margin:1.5rem 0 0 auto}
+    .expertise-stage{display:grid;grid-template-columns:minmax(230px,.68fr) minmax(0,1.32fr);min-height:560px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.expertise-index{display:flex;flex-direction:column;justify-content:center;padding:2rem 2rem 2rem 0;border-right:1px solid var(--line)}.expertise-tab{display:grid;grid-template-columns:40px 1fr 20px;gap:.7rem;align-items:center;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--line);padding:1.45rem .7rem 1.45rem 0;cursor:pointer;transition:padding .3s var(--ease),color .2s ease}.expertise-tab:first-child{border-top:1px solid var(--line)}.expertise-tab .num{font:italic 1.05rem var(--serif);color:#999783}.expertise-tab .tab-title{font:400 clamp(1.4rem,2.4vw,2.2rem) var(--serif)}.expertise-tab .tab-arrow{opacity:0;transform:translate(-5px,5px);transition:opacity .25s ease,transform .25s ease}.expertise-tab[aria-selected=true]{padding-left:.8rem;color:var(--green);background:rgba(255,255,255,.32)}.expertise-tab[aria-selected=true] .tab-arrow{opacity:1;transform:none}
+    .expertise-panel{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,3vw,3.2rem);padding:2rem 0 2rem 2.5rem;align-items:center;min-width:0}.panel-image{height:100%;min-height:390px;position:relative;overflow:hidden;background:#d2d1c8}.panel-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;transition:opacity .25s ease,transform .7s var(--ease)}.panel-image:hover img{transform:scale(1.025)}.panel-copy{padding:1rem 0}.panel-copy .detail-index{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}.panel-copy h3{font:400 clamp(2.5rem,4vw,4.1rem)/.92 var(--serif);letter-spacing:-.045em;margin:1.2rem 0}.panel-copy p{font-size:.78rem;line-height:1.85;color:#667067}.service-list{list-style:none;padding:1rem 0;margin:1.3rem 0;border-top:1px solid var(--line)}.service-list li{padding:.53rem 0;font-size:.7rem;color:#4f5a52;border-bottom:1px solid rgba(23,37,31,.1)}.service-list li:before{content:"↗";color:#9b8b64;margin-right:.7rem}.panel-link{display:inline-flex;gap:.7rem;align-items:center;font-size:.69rem;font-weight:600;border-bottom:1px solid var(--gold);padding-bottom:.55rem;margin-top:.3rem}.expertise-note{display:flex;justify-content:space-between;gap:2rem;margin-top:1rem;color:var(--muted);font-size:.59rem;line-height:1.6}
+    .approach{background:var(--paper-2);padding:clamp(5.5rem,9vw,9rem) 0}.approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,8vw,9rem);align-items:center}.approach-visual{position:relative;min-height:620px;overflow:hidden;background:#c8c8bd}.approach-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.approach-visual figcaption{position:absolute;bottom:1.2rem;left:1.2rem;color:white;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase}.approach-copy .kicker{margin-bottom:2rem}.approach-copy h2{font:400 clamp(3.4rem,6vw,6.5rem)/.88 var(--serif);letter-spacing:-.055em;margin-bottom:1.7rem}.approach-copy>p{max-width:440px;color:#5f685f;font-size:.82rem;line-height:1.9}.principles{margin-top:3rem;border-top:1px solid var(--line)}.principle{display:grid;grid-template-columns:44px 1fr;gap:1rem;padding:1.25rem 0;border-bottom:1px solid var(--line)}.principle>span{font:italic 1.1rem var(--serif);color:#9b8b64}.principle strong{font-size:.75rem;font-weight:600}.principle p{font-size:.7rem;color:var(--muted);line-height:1.65;margin:.4rem 0 0}
+    .closing{padding:clamp(6rem,11vw,11rem) var(--gutter);background:var(--green);color:var(--paper);position:relative;overflow:hidden}.closing-inner{width:min(100%,1280px);margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:5vw;align-items:end}.closing .kicker{color:#c4b995}.closing h2{font:400 clamp(4rem,8.5vw,9rem)/.8 var(--serif);letter-spacing:-.065em;margin:2rem 0 0;max-width:8ch}.closing h2 em{color:#c4b995}.closing-aside{padding-bottom:.5rem}.closing-aside p{max-width:330px;color:rgba(243,240,232,.72);font-size:.83rem;line-height:1.85;margin-bottom:2rem}.closing .button{background:var(--paper);color:var(--green);border-color:var(--paper)}.closing .button:hover{background:transparent;color:var(--paper)}
+    .contact{padding:clamp(5.5rem,9vw,9rem) 0}.contact-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:4vw;margin-bottom:4rem}.contact-head h2{font:400 clamp(3.5rem,6.5vw,7rem)/.86 var(--serif);letter-spacing:-.06em;margin:0;max-width:9ch}.contact-head p{max-width:360px;color:var(--muted);font-size:.82rem;line-height:1.8;margin:1.5rem 0 0 auto}.contact-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(3rem,8vw,8rem);border-top:1px solid var(--line);padding-top:2rem}.contact-aside{color:var(--muted);font-size:.72rem;line-height:1.8}.contact-aside strong{display:block;color:var(--green);font-weight:600;margin-bottom:.35rem}.contact-aside .contact-note{margin-top:2rem;max-width:260px;font-size:.65rem}
+    .enquiry-form{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem 1.3rem}.field{display:flex;flex-direction:column;gap:.65rem;min-width:0}.field.full{grid-column:1/-1}.field label{font-size:.65rem;font-weight:600}.field input,.field select,.field textarea{width:100%;border:0;border-bottom:1px solid rgba(23,37,31,.3);border-radius:0;background:transparent;padding:.75rem 0;color:var(--green);font-size:.78rem;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green)}.field textarea{min-height:100px;resize:vertical}.field input::placeholder,.field textarea::placeholder{color:#96988f}.form-submit{grid-column:1/-1;justify-self:start;cursor:pointer}.form-note{grid-column:1/-1;color:var(--muted);font-size:.62rem;line-height:1.65;margin:-.5rem 0 0}.form-status{display:none;grid-column:1/-1;padding:1rem;background:#dfe5da;color:var(--green);font-size:.75rem;line-height:1.6}.form-status.is-visible{display:block}
+    .footer{margin-left:var(--rail);background:#111c17;color:var(--paper);padding:2.2rem var(--gutter)}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}.footer-wordmark{font:600 .85rem var(--sans);letter-spacing:.2em}.footer-meta,.footer-links{font-size:.62rem;color:rgba(243,240,232,.62)}.footer-links{display:flex;gap:1.3rem}
+    .reveal{opacity:1;transform:none}.motion-ready .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.motion-ready .reveal.is-visible{opacity:1;transform:none}.hero-copy>*{animation:hero-enter .75s var(--ease) both}.hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.23s}.hero-copy>*:nth-child(5){animation-delay:.3s}.hero-visual img{animation:hero-image .95s var(--ease) both}@keyframes hero-enter{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}@keyframes hero-image{from{opacity:.55;transform:scale(1.035)}to{opacity:1;transform:scale(1)}}.panel-copy.is-changing{animation:panel-in .35s var(--ease)}@keyframes panel-in{from{opacity:.35;transform:translateY(8px)}to{opacity:1;transform:none}}
+    @media(max-width:1050px){:root{--rail:62px}.hero{grid-template-columns:.9fr 1.1fr}.hero-visual{min-height:520px}.expertise-stage{grid-template-columns:.7fr 1.3fr}.expertise-panel{grid-template-columns:1fr;gap:1.3rem}.panel-image{min-height:250px;max-height:300px}.panel-copy{padding:0}.approach-visual{min-height:520px}}
+    @media(max-width:720px){:root{--rail:0px;--gutter:1.25rem}.site-rail{display:none}.mobile-header{height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--gutter);position:sticky;top:0;z-index:40;background:rgba(243,240,232,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.mobile-wordmark{font-size:.75rem;font-weight:700;letter-spacing:.2em}.mobile-menu{border:1px solid var(--line);background:transparent;padding:.65rem .8rem;font-size:.63rem;letter-spacing:.12em;cursor:pointer}.mobile-nav{display:none;position:absolute;top:65px;left:0;right:0;background:var(--paper);padding:.5rem var(--gutter) 1rem;border-bottom:1px solid var(--line)}.mobile-nav.is-open{display:grid}.mobile-nav a{padding:.9rem 0;border-bottom:1px solid var(--line);font:400 1.5rem var(--serif)}main,.footer{margin-left:0}
+      .hero{min-height:0;display:flex;flex-direction:column;padding:3.5rem var(--gutter) 2rem;gap:2rem}.hero-copy{padding:0 0 1rem;order:1}.hero-number{top:-1.9rem}h1{font-size:clamp(4.3rem,17vw,7rem);max-width:7.4ch;margin:1.5rem 0 1.3rem}.hero-lede{font-size:.84rem;max-width:340px}.hero-visual{order:2;min-height:58svh;max-height:600px;width:calc(100% + var(--gutter));margin-right:calc(-1 * var(--gutter))}.hero-vertical{right:.8rem}.hero-aside{display:none}.hero-bottom{order:3;width:100%;font-size:.54rem;gap:1rem;align-items:flex-start}.hero-bottom span:last-child{text-align:right}
+      .manifesto{padding:5.5rem var(--gutter)}.manifesto-inner{grid-template-columns:1fr;gap:2rem}.manifesto .kicker{margin:0}.manifesto h2{font-size:clamp(3.6rem,14vw,5.8rem)}.manifesto-foot{grid-column:1;margin:0;max-width:360px}.manifesto-index{top:1.5rem}
+      .expertise{padding:5.5rem 0}.expertise-head{grid-template-columns:1fr;gap:1.5rem;margin-bottom:2.5rem}.expertise-head h2{font-size:clamp(3.5rem,14vw,5.8rem)}.expertise-head p{margin:0;max-width:340px}.expertise-stage{display:flex;flex-direction:column;min-height:0}.expertise-index{padding:0;border-right:0}.expertise-tab{grid-template-columns:34px 1fr 20px;padding:1rem 0}.expertise-tab[aria-selected=true]{padding-left:.5rem}.expertise-tab .tab-title{font-size:1.65rem}.expertise-panel{padding:1.5rem 0 2rem;grid-template-columns:1fr;gap:1.5rem}.panel-image{min-height:310px;max-height:none;aspect-ratio:4/3}.panel-copy h3{font-size:3.3rem}.expertise-note{flex-direction:column;gap:.35rem}
+      .approach{padding:5.5rem 0}.approach-grid{grid-template-columns:1fr;gap:2.5rem}.approach-visual{min-height:0;aspect-ratio:4/5;max-height:600px}.approach-copy h2{font-size:clamp(3.7rem,14vw,5.7rem)}.closing{padding:5.5rem var(--gutter)}.closing-inner{grid-template-columns:1fr;gap:2.5rem}.closing h2{font-size:clamp(4.4rem,17vw,7rem)}
+      .contact{padding:5.5rem 0}.contact-head{grid-template-columns:1fr;gap:1.5rem;margin-bottom:2.5rem}.contact-head h2{font-size:clamp(3.6rem,14vw,5.8rem)}.contact-head p{margin:0;max-width:340px}.contact-grid{grid-template-columns:1fr;gap:2.5rem}.enquiry-form{grid-template-columns:1fr;gap:1.4rem}.field.full,.form-submit,.form-note,.form-status{grid-column:1}.footer-inner{align-items:flex-start;flex-direction:column}}
+    @media(max-width:380px){h1{font-size:clamp(3.8rem,16vw,4.7rem)}.hero-actions{gap:1rem}.button{min-height:49px;padding-inline:1rem}.visual-caption{left:1rem;right:1rem}.manifesto h2{font-size:3.4rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.motion-ready .reveal{opacity:1;transform:none}}
   </style>
-  <script>document.documentElement.classList.add('js-motion-ready');</script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Amarence Consults",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Port Harcourt",
-      "addressRegion": "Rivers State",
-      "addressCountry": "NG"
-    },
-    "areaServed": "Port Harcourt, Nigeria"
-  }
-  </script>
+  <script>document.documentElement.classList.add('motion-ready');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Amarence Consults","address":{"@type":"PostalAddress","addressLocality":"Port Harcourt","addressRegion":"Rivers State","addressCountry":"NG"},"areaServed":"Port Harcourt, Nigeria"}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="shell nav-wrap">
-      <a class="wordmark" href="#top" aria-label="Amarence Consults home"><span class="mark"><span>A</span></span><span>AMARENCE</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">MENU</button>
-      <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
-        <a href="#approach">Our approach</a>
-        <a href="#services">What we do</a>
-        <a href="#difference">Why Amarence</a>
-        <a class="nav-cta" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
-      </nav>
-    </div>
-  </header>
-
+  <aside class="site-rail" aria-label="Site navigation"><a class="rail-mark" href="#top" aria-label="Amarence home">A</a><a class="rail-brand" href="#top">AMARENCE</a><nav class="rail-links" aria-label="Primary navigation"><a href="#approach">Perspective</a><a href="#expertise">Expertise</a><a href="#contact">Enquiries</a></nav><span class="rail-bottom">PORT HARCOURT · NG</span></aside>
+  <header class="mobile-header"><a class="mobile-wordmark" href="#top">AMARENCE</a><button class="mobile-menu" type="button" aria-expanded="false" aria-controls="mobile-nav">MENU</button><nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"><a href="#approach">Our perspective</a><a href="#expertise">Areas of expertise</a><a href="#difference">Our approach</a><a href="#contact">Start a conversation</a></nav></header>
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Business · Finance · Travel</p>
-          <h1 id="hero-title">Good decisions move <em>everything</em> forward.</h1>
-          <p class="hero-lede">Practical support for the work behind a business — and the journeys beyond it. One considered place to begin.</p>
-          <div class="hero-actions">
-            <a class="button" href="#services">Explore our services <span class="arrow" aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#contact">Talk to Amarence</a>
-          </div>
-        </div>
-        <aside class="hero-aside">
-          <strong>Clarity, at every step.</strong>
-          A connected approach to corporate services, financial support and travel assistance.
-        </aside>
-      </div>
-      <span class="hero-index" aria-hidden="true">Port Harcourt · Nigeria</span>
-    </section>
-
-    <div class="location-band">
-      <div class="shell location-inner">
-        <p>Rooted in Port Harcourt <span>—</span> Connected to what comes next.</p>
-        <p>Corporate support <span>·</span> Finance <span>·</span> Travel</p>
-      </div>
-    </div>
-
-    <section class="shell intro reveal" id="approach">
-      <div>
-        <p class="section-kicker">A more connected kind of support</p>
-      </div>
-      <div>
-        <h2>Business needs are connected. The support behind them should be <em>too.</em></h2>
-        <p class="intro-note">From getting a business properly established to making informed financial decisions or arranging a journey, the details matter. Amarence brings these different needs into one approachable conversation.</p>
-      </div>
-    </section>
-
-    <section class="services" id="services" aria-labelledby="services-title">
-      <div class="shell">
-        <div class="services-head reveal">
-          <div>
-            <p class="section-kicker">How we can help</p>
-            <h2 id="services-title">The right support for the next step.</h2>
-          </div>
-          <p>Explore the areas of support represented in this website concept. Select a discipline to see the services grouped within it.</p>
-        </div>
-        <div class="service-explorer reveal">
-          <div class="service-tabs" role="tablist" aria-label="Service areas">
-            <button class="service-tab" id="tab-corporate" type="button" role="tab" aria-selected="true" aria-controls="panel-corporate" tabindex="0" data-service="corporate">
-              <span class="tab-no">A.</span><strong>Corporate services</strong><span class="tab-arrow" aria-hidden="true">↗</span>
-            </button>
-            <button class="service-tab" id="tab-finance" type="button" role="tab" aria-selected="false" aria-controls="panel-finance" tabindex="-1" data-service="finance">
-              <span class="tab-no">B.</span><strong>Finance & accounting</strong><span class="tab-arrow" aria-hidden="true">↗</span>
-            </button>
-            <button class="service-tab" id="tab-travel" type="button" role="tab" aria-selected="false" aria-controls="panel-travel" tabindex="-1" data-service="travel">
-              <span class="tab-no">C.</span><strong>Travel assistance</strong><span class="tab-arrow" aria-hidden="true">↗</span>
-            </button>
-          </div>
-          <div class="service-detail" id="service-panel" role="tabpanel" aria-labelledby="tab-corporate" tabindex="0">
-            <span class="detail-index" id="detail-index">Corporate services</span>
-            <h3 id="detail-title">Build on a clear foundation.</h3>
-            <p id="detail-copy">Support for the essential steps involved in establishing and formalising a business, with guidance shaped around the requirements of each enquiry.</p>
-            <ul class="service-list" id="detail-list">
-              <li>CAC business registration</li><li>Business name conversion enquiries</li><li>Trademark registration</li><li>SCUML-related assistance</li>
-            </ul>
-            <a class="detail-link" href="#contact">Discuss a corporate enquiry <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="shell bridge" id="difference">
-      <div class="bridge-visual reveal">
-        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1300&q=84" alt="Colleagues sharing ideas around a table in a bright workspace" loading="lazy" decoding="async" width="1300" height="1500">
-        <span class="image-caption">A considered approach to moving forward</span>
-      </div>
-      <div class="bridge-copy reveal">
-        <p class="section-kicker">The Amarence approach</p>
-        <h2>Less uncertainty. More room to <em>move.</em></h2>
-        <p>Good service begins with understanding what you need. The aim is to make the next step easier to see, the options easier to understand and the conversation easier to start.</p>
-        <div class="principles">
-          <div class="principle"><span>01</span><div><strong>Start with the real need</strong><p>Understand the task before recommending a route.</p></div></div>
-          <div class="principle"><span>02</span><div><strong>Make the details clearer</strong><p>Set out the relevant steps and information in plain language.</p></div></div>
-          <div class="principle"><span>03</span><div><strong>Keep the next step practical</strong><p>Move the enquiry toward a clear, agreed action.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="shell contact-grid">
-        <div class="reveal">
-          <p class="section-kicker">A good place to begin</p>
-          <h2 id="contact-title">Let's make your next move <em>clear.</em></h2>
-          <p class="contact-intro">Tell us a little about what you need. Start with a question, a business requirement or a travel enquiry.</p>
-          <div class="contact-meta">
-            <div><strong>Find us</strong>Port Harcourt<br>Rivers State, Nigeria</div>
-            <div><strong>Our focus</strong>Business<br>Finance · Travel</div>
-          </div>
-        </div>
-        <form class="enquiry-form reveal" id="enquiry-form">
-          <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="How should we address you?" required></div>
-          <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
-          <div class="field"><label for="service">What can we help with?</label><select id="service" name="service" required><option value="" selected disabled>Select a service area</option><option>Corporate services</option><option>Finance & accounting</option><option>Travel assistance</option><option>I'm not sure yet</option></select></div>
-          <div class="field"><label for="message">A little about your enquiry</label><textarea id="message" name="message" placeholder="Share the details that will help us understand what you need." required></textarea></div>
-          <button class="button form-submit" type="submit">Send enquiry <span class="arrow" aria-hidden="true">↗</span></button>
-          <p class="form-note">Website demonstration: this form currently shows a local confirmation only. Connect an approved Amarence email or CRM endpoint before accepting live enquiries.</p>
-          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
-        </form>
-      </div>
-    </section>
+    <section class="hero" id="top" aria-labelledby="hero-title"><div class="hero-copy"><span class="hero-number">INDEPENDENT PROFESSIONAL SERVICES · 01</span><p class="eyebrow">A more considered way forward</p><h1 id="hero-title">Clarity for <em>what</em> comes next.</h1><p class="hero-lede">Thoughtful professional support for the decisions, opportunities and journeys that shape your next chapter.</p><div class="hero-actions"><a class="button" href="#expertise">Explore our expertise <span class="arrow" aria-hidden="true">↗</span></a><a class="quiet-link" href="#approach">Discover Amarence</a></div><span class="hero-aside">Comfort · Elegance · Mastery</span></div><figure class="hero-visual"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1900&q=88" alt="Monumental contemporary office towers rising into a bright open sky" fetchpriority="high" decoding="async" width="1900" height="2200"><span class="hero-vertical">A PERSPECTIVE BUILT AROUND POSSIBILITY</span><figcaption class="visual-caption"><span>Perspective / 001</span><span>Room to move forward.</span></figcaption></figure><div class="hero-bottom"><span><strong>Amarence Consults</strong> · Professional services</span><span>Port Harcourt, Nigeria <span aria-hidden="true">↗</span></span></div></section>
+    <section class="manifesto" id="approach" aria-labelledby="manifesto-title"><span class="manifesto-index">02 / THE AMARENCE PERSPECTIVE</span><div class="manifesto-inner"><p class="kicker">A connected perspective</p><div><h2 id="manifesto-title">The important things in life rarely happen in <em>isolation.</em></h2><p class="manifesto-foot">A business takes shape. Financial decisions create direction. New places open possibilities. We believe the support around these moments should feel clear, considered and connected.</p></div></div></section>
+    <section class="expertise" id="expertise" aria-labelledby="expertise-title"><div class="shell"><div class="expertise-head reveal"><p class="kicker">Three areas. One considered standard.</p><div><h2 id="expertise-title">Different needs. <em>One clear direction.</em></h2><p>Explore the areas of assistance represented by Amarence. Each begins with understanding what matters to you.</p></div></div><div class="expertise-stage reveal"><div class="expertise-index" role="tablist" aria-label="Areas of expertise"><button class="expertise-tab" id="tab-corporate" type="button" role="tab" aria-selected="true" aria-controls="expertise-panel" data-key="corporate"><span class="num">01</span><span class="tab-title">Corporate</span><span class="tab-arrow" aria-hidden="true">↗</span></button><button class="expertise-tab" id="tab-finance" type="button" role="tab" aria-selected="false" aria-controls="expertise-panel" tabindex="-1" data-key="finance"><span class="num">02</span><span class="tab-title">Financial</span><span class="tab-arrow" aria-hidden="true">↗</span></button><button class="expertise-tab" id="tab-travel" type="button" role="tab" aria-selected="false" aria-controls="expertise-panel" tabindex="-1" data-key="travel"><span class="num">03</span><span class="tab-title">Travel</span><span class="tab-arrow" aria-hidden="true">↗</span></button></div><div class="expertise-panel" id="expertise-panel" role="tabpanel" aria-labelledby="tab-corporate" tabindex="0"><div class="panel-image"><img id="expertise-image" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1100&q=84" alt="Contemporary international business architecture" loading="lazy" decoding="async" width="1100" height="1300"></div><div class="panel-copy" id="panel-copy"><span class="detail-index" id="detail-index">AREA 01 / CORPORATE SERVICES</span><h3 id="detail-title">Build on a clear foundation.</h3><p id="detail-copy">Guidance for the essential steps involved in establishing and formalising a business, shaped around the requirements of each enquiry.</p><ul class="service-list" id="detail-list"><li>CAC business registration</li><li>Business name conversion enquiries</li><li>Trademark registration</li><li>SCUML-related assistance</li></ul><a class="panel-link" href="#contact">Discuss a corporate enquiry <span aria-hidden="true">↗</span></a></div></div></div><div class="expertise-note"><span>Service descriptions are indicative and subject to confirmation by Amarence Consults.</span><span>SELECT AN AREA TO EXPLORE ↗</span></div></div></section>
+    <section class="approach" id="difference" aria-labelledby="approach-title"><div class="shell approach-grid"><figure class="approach-visual reveal"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1300&q=85" alt="Warm, light-filled contemporary professional workspace" loading="lazy" decoding="async" width="1300" height="1600"><figcaption>A thoughtful approach to every conversation</figcaption></figure><div class="approach-copy reveal"><p class="kicker">The Amarence approach</p><h2 id="approach-title">Good guidance begins with <em>understanding.</em></h2><p>Every enquiry begins somewhere different. Our proposed approach is simple: understand the need, make the options clearer and help identify a practical next step.</p><div class="principles"><div class="principle"><span>01</span><div><strong>Listen with intention</strong><p>Start with the person, the context and the matter at hand.</p></div></div><div class="principle"><span>02</span><div><strong>Bring the details into focus</strong><p>Make relevant information and possible next steps easier to understand.</p></div></div><div class="principle"><span>03</span><div><strong>Move forward with purpose</strong><p>Agree on a clear direction for the enquiry and what follows.</p></div></div></div></div></div></section>
+    <section class="closing" aria-labelledby="closing-title"><div class="closing-inner"><div><p class="kicker">The next chapter starts here</p><h2 id="closing-title">Make room for <em>what's next.</em></h2></div><div class="closing-aside"><p>Whether you're building a business, seeking financial support or planning a journey, begin with a conversation about what you need.</p><a class="button" href="#contact">Start a conversation <span class="arrow" aria-hidden="true">↗</span></a></div></div></section>
+    <section class="contact" id="contact" aria-labelledby="contact-title"><div class="shell"><div class="contact-head reveal"><p class="kicker">A considered first step</p><div><h2 id="contact-title">Let's begin with a conversation.</h2><p>Tell us what brings you here. You don't need to have every detail figured out before you get in touch.</p></div></div><div class="contact-grid"><aside class="contact-aside"><strong>Amarence Consults</strong>Port Harcourt<br>Rivers State, Nigeria<br><br><strong>Areas of assistance</strong>Corporate services<br>Finance &amp; accounting<br>Travel assistance<p class="contact-note">Official contact details will be added once supplied and approved by Amarence.</p></aside><form class="enquiry-form" id="enquiry-form"><div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="How should we address you?" required></div><div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div><div class="field"><label for="audience">I am enquiring as</label><select id="audience" name="audience" required><option value="" selected disabled>Select one</option><option>Individual</option><option>Business / Organisation</option><option>On behalf of someone else</option></select></div><div class="field"><label for="service">Area of assistance</label><select id="service" name="service" required><option value="" selected disabled>Select an area</option><option>Corporate services</option><option>Finance &amp; accounting</option><option>Travel assistance</option><option>I'm not sure yet</option></select></div><div class="field full"><label for="message">Tell us a little about what you need</label><textarea id="message" name="message" placeholder="A few details will help us understand your enquiry." required></textarea></div><button class="button form-submit" type="submit">Prepare enquiry <span class="arrow" aria-hidden="true">↗</span></button><p class="form-note">Demonstration only: this form validates locally and displays a confirmation. It does not send or store your information. An approved Amarence inbox or CRM connection and privacy notice are required before launch.</p><div class="form-status" id="form-status" role="status" aria-live="polite"></div></form></div></div></section>
   </main>
-
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <a class="wordmark" href="#top"><span class="mark"><span>A</span></span><span>AMARENCE</span></a>
-      <p class="footer-note">Business. Finance. Travel. · Port Harcourt, Nigeria</p>
-      <div class="footer-links"><a href="#approach">Approach</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
-      <p class="footer-note">© <span id="year"></span> Amarence Consults</p>
-    </div>
-  </footer>
-
+  <footer class="footer"><div class="footer-inner"><a class="footer-wordmark" href="#top">AMARENCE</a><span class="footer-meta">Professional services · Port Harcourt, Nigeria</span><nav class="footer-links" aria-label="Footer navigation"><a href="#approach">Perspective</a><a href="#expertise">Expertise</a><a href="#contact">Enquiries</a></nav><span class="footer-meta">© <span id="year"></span> Amarence Consults</span></div></footer>
   <script>
-    (() => {
-      const menuButton = document.querySelector('.menu-toggle');
-      const nav = document.querySelector('#primary-nav');
-      if (menuButton && nav) {
-        menuButton.addEventListener('click', () => {
-          const open = menuButton.getAttribute('aria-expanded') !== 'true';
-          menuButton.setAttribute('aria-expanded', String(open));
-          menuButton.textContent = open ? 'CLOSE' : 'MENU';
-          nav.classList.toggle('is-open', open);
-        });
-        nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-          menuButton.setAttribute('aria-expanded', 'false');
-          menuButton.textContent = 'MENU';
-          nav.classList.remove('is-open');
-        }));
-      }
-
-      const serviceContent = {
-        corporate: {
-          label: 'Corporate services',
-          title: 'Build on a clear foundation.',
-          copy: 'Support for the essential steps involved in establishing and formalising a business, with guidance shaped around the requirements of each enquiry.',
-          items: ['CAC business registration', 'Company structure changes', 'Trademark registration', 'SCUML-related assistance']
-        },
-        finance: {
-          label: 'Finance & accounting',
-          title: 'Bring clarity to the numbers.',
-          copy: 'Accounting and financial consultancy support to help individuals and organisations understand their obligations, organise information and make more informed decisions.',
-          items: ['Accounting consultancy', 'Financial consultancy']
-        },
-        travel: {
-          label: 'Travel assistance',
-          title: 'Make the journey easier.',
-          copy: 'Travel enquiry and flight-booking assistance, with a clear starting point for planning the details of your next trip.',
-          items: ['Flight booking enquiries', 'Travel booking assistance']
-        }
-      };
-      const tabs = [...document.querySelectorAll('.service-tab')];
-      const panel = document.querySelector('#service-panel');
-      const index = document.querySelector('#detail-index');
-      const title = document.querySelector('#detail-title');
-      const copy = document.querySelector('#detail-copy');
-      const list = document.querySelector('#detail-list');
-      function selectService(key, focusTab = false) {
-        const data = serviceContent[key];
-        if (!data) return;
-        tabs.forEach(tab => {
-          const selected = tab.dataset.service === key;
-          tab.setAttribute('aria-selected', String(selected));
-          tab.tabIndex = selected ? 0 : -1;
-          if (selected && focusTab) tab.focus();
-        });
-        panel.setAttribute('aria-labelledby', 'tab-' + key);
-        panel.classList.remove('is-changing');
-        void panel.offsetWidth;
-        index.textContent = data.label;
-        title.textContent = data.title;
-        copy.textContent = data.copy;
-        list.replaceChildren(...data.items.map(item => {
-          const li = document.createElement('li');
-          li.textContent = item;
-          return li;
-        }));
-        panel.classList.add('is-changing');
-      }
-      tabs.forEach((tab, position) => {
-        tab.addEventListener('click', () => selectService(tab.dataset.service));
-        tab.addEventListener('keydown', event => {
-          if (!['ArrowDown', 'ArrowUp', 'ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
-          event.preventDefault();
-          let next = position;
-          if (event.key === 'ArrowDown' || event.key === 'ArrowRight') next = (position + 1) % tabs.length;
-          if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') next = (position - 1 + tabs.length) % tabs.length;
-          if (event.key === 'Home') next = 0;
-          if (event.key === 'End') next = tabs.length - 1;
-          selectService(tabs[next].dataset.service, true);
-        });
-      });
-
-      const form = document.querySelector('#enquiry-form');
-      const status = document.querySelector('#form-status');
-      if (form && status) {
-        form.addEventListener('submit', event => {
-          event.preventDefault();
-          if (!form.reportValidity()) return;
-          const visitor = form.querySelector('[name="name"]').value.trim();
-          status.textContent = 'Thank you' + (visitor ? ', ' + visitor : '') + '. This demonstration form is working locally, but no enquiry has been sent or stored. An approved Amarence inbox or CRM connection is required before launch.';
-          status.classList.add('is-visible');
-          form.reset();
-        });
-      }
-
-      document.querySelector('#year').textContent = new Date().getFullYear();
-
-      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const revealItems = document.querySelectorAll('.reveal');
-      if (!reducedMotion && 'IntersectionObserver' in window) {
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-        revealItems.forEach(item => observer.observe(item));
-      } else {
-        revealItems.forEach(item => item.classList.add('is-visible'));
-      }
+    (()=>{
+      const menuButton=document.querySelector('.mobile-menu'),mobileNav=document.querySelector('#mobile-nav');
+      if(menuButton&&mobileNav){menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'CLOSE':'MENU';mobileNav.classList.toggle('is-open',open)});mobileNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menuButton.setAttribute('aria-expanded','false');menuButton.textContent='MENU';mobileNav.classList.remove('is-open')}))}
+      const expertise={corporate:{label:'AREA 01 / CORPORATE SERVICES',title:'Build on a clear foundation.',copy:'Guidance for the essential steps involved in establishing and formalising a business, shaped around the requirements of each enquiry.',items:['CAC business registration','Business name conversion enquiries','Trademark registration','SCUML-related assistance'],image:'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1100&q=84',alt:'Contemporary international business architecture'},finance:{label:'AREA 02 / FINANCE & ACCOUNTING',title:'Bring the bigger picture into focus.',copy:'Financial and accounting consultancy support intended to help individuals and organisations organise information and approach decisions with greater clarity.',items:['Accounting consultancy','Financial consultancy'],image:'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=84',alt:'Light-filled professional workspace'},travel:{label:'AREA 03 / TRAVEL SERVICES',title:'Make the journey feel simpler.',copy:'Travel and flight-booking assistance, offering a clear starting point for planning the details of an upcoming journey.',items:['Flight booking enquiries','Travel booking assistance'],image:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1100&q=84',alt:'Aircraft wing above clouds in daylight'}};
+      const tabs=[...document.querySelectorAll('.expertise-tab')],panel=document.querySelector('#expertise-panel'),panelCopy=document.querySelector('#panel-copy'),image=document.querySelector('#expertise-image');
+      function selectExpertise(key,moveFocus=false){const item=expertise[key];if(!item)return;tabs.forEach(tab=>{const active=tab.dataset.key===key;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;if(active&&moveFocus)tab.focus()});panel.setAttribute('aria-labelledby','tab-'+key);panelCopy.classList.remove('is-changing');void panelCopy.offsetWidth;document.querySelector('#detail-index').textContent=item.label;document.querySelector('#detail-title').textContent=item.title;document.querySelector('#detail-copy').textContent=item.copy;document.querySelector('#detail-list').replaceChildren(...item.items.map(text=>{const li=document.createElement('li');li.textContent=text;return li}));image.src=item.image;image.alt=item.alt;panelCopy.classList.add('is-changing')}
+      tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>selectExpertise(tab.dataset.key));tab.addEventListener('keydown',event=>{if(!['ArrowDown','ArrowUp','ArrowRight','ArrowLeft','Home','End'].includes(event.key))return;event.preventDefault();let next=index;if(event.key==='ArrowDown'||event.key==='ArrowRight')next=(index+1)%tabs.length;if(event.key==='ArrowUp'||event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;if(event.key==='Home')next=0;if(event.key==='End')next=tabs.length-1;selectExpertise(tabs[next].dataset.key,true)})});
+      const form=document.querySelector('#enquiry-form'),status=document.querySelector('#form-status');if(form&&status)form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;const name=form.elements.name.value.trim();status.textContent='Thank you'+(name?', '+name:'')+'. Your enquiry has been prepared in this demonstration. Nothing has been sent or stored; a live Amarence contact connection is still required.';status.classList.add('is-visible');form.reset()});document.querySelector('#year').textContent=new Date().getFullYear();
+      const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,reveals=document.querySelectorAll('.reveal');if(!reduce&&'IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -35px 0px'});reveals.forEach(element=>observer.observe(element))}else reveals.forEach(element=>element.classList.add('is-visible'));
     })();
   </script>
 </body>
